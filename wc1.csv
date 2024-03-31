@@ -1,0 +1,15 @@
+#,event,stage,winner,win_method,player_1,player_2,p1_champ,p2_champ,p1_ban,p2_ban,duration,length (s)
+1,Wow Cup 1,SWISS R1,mikey,first blood,mikey,aidan,riven,xerath,skarner,soraka,0.001770833,153
+2,Wow Cup 1,SWISS R1,sarjoun,first blood,sarjoun,jack,yone,ezreal,vayne,yasuo,0.003240741,280
+3,Wow Cup 1,SWISS R1,alex,first blood,alex,maria,ahri,seraphine,zyra,none,0.002002315,173
+4,Wow Cup 1,SWISS R1,andrew,first blood,andrew,nickancel,draven,fiora,wukong,mordekaiser,0.001921296,166
+5,Wow Cup 1,SWISS R2,andrew,first blood,andrew,mikey,zed,irelia,none,draven,0.001527778,132
+6,Wow Cup 1,SWISS R2,sarjoun,first blood,alex,sarjoun,irelia,yasuo,none,diana,0.001585648,137
+7,Wow Cup 1,SWISS R2,aidan,first blood,nickancel,aidan,wukong,zed,none,yuumi,0.004340278,375
+8,Wow Cup 1,SWISS R2,maria,first blood,jack,maria,vayne,heimerdinger,none,none,0.003888889,336
+9,Wow Cup 1,SWISS R3,aidan,first blood,maria,aidan,karma,rengar,none,nami,0.001226852,106
+10,Wow Cup 1,SWISS R3,mikey,first blood,mikey,alex,vi,kindred,diana,corki,0.000706019,61
+11,Wow Cup 1,SEMIFINAL,sarjoun,first blood,sarjoun,andrew,yasuo,teemo,none,none,0.00150463,130
+12,Wow Cup 1,SEMIFINAL,aidan,first blood,mikey,aidan,gnar,akali,skarner,soraka,0.003136574,271
+13,Wow Cup 1,FINAL M1,aidan,first blood,sarjoun,aidan,yasuo,yasuo,none,none,0.001469907,127
+14,Wow Cup 1,FINAL M2,aidan,first blood,sarjoun,aidan,zed,zed,none,none,0.00181713,157

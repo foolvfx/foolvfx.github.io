@@ -1,0 +1,228 @@
+{
+	"headers": [
+		"#",
+		"player",
+		"win-loss",
+		"winrate",
+		"matches",
+		"avg_length",
+		"unique_champs",
+		"played",
+		"banned_against"
+	],
+	"matches": [
+		{
+			"szn": 0,
+			"#": 1,
+			"stage": "SWISS R1",
+			"winner": "p1",
+			"p1": {
+				"name": "mikey",
+				"champ": "riven",
+				"ban": "skarner"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "xerath",
+				"ban": "soraka"
+			},
+			"win_method": "kill",
+			"duration": "2:33"
+		},
+		{
+			"szn": 0,
+			"#": 2,
+			"stage": "SWISS R1",
+			"winner": "p1",
+			"p1": {
+				"name": "sarjoun",
+				"champ": "yone",
+				"ban": "vayne"
+			},
+			"p2": {
+				"name": "jack",
+				"champ": "ezreal",
+				"ban": "yasuo"
+			},
+			"win_method": "kill",
+			"duration": "4:40"
+		},
+		{
+			"szn": 0,
+			"#": 4,
+			"stage": "SWISS R1",
+			"winner": "p1",
+			"p1": {
+				"name": "andrew",
+				"champ": "draven",
+				"ban": "wukong"
+			},
+			"p2": {
+				"name": "nick",
+				"champ": "fiora",
+				"ban": "mordekaiser"
+			},
+			"win_method": "kill",
+			"duration": "2:46"
+		},
+		{
+			"szn": 0,
+			"#": 5,
+			"stage": "SWISS R2",
+			"winner": "p1",
+			"p1": {
+				"name": "andrew",
+				"champ": "zed",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "mikey",
+				"champ": "irelia",
+				"ban": "draven"
+			},
+			"win_method": "kill",
+			"duration": "2:12"
+		},
+		{
+			"szn": 0,
+			"#": 7,
+			"stage": "SWISS R2",
+			"winner": "p2",
+			"p1": {
+				"name": "nick",
+				"champ": "wukong",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "zed",
+				"ban": "yuumi"
+			},
+			"win_method": "kill",
+			"duration": "6:15"
+		},
+		{
+			"szn": 0,
+			"#": 8,
+			"stage": "SWISS R2",
+			"winner": "p2",
+			"p1": {
+				"name": "jack",
+				"champ": "vayne",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "maria",
+				"champ": "heimerdinger",
+				"ban": "none"
+			},
+			"win_method": "kill",
+			"duration": "5:36"
+		},
+		{
+			"szn": 0,
+			"#": 9,
+			"stage": "SWISS R3",
+			"winner": "p2",
+			"p1": {
+				"name": "maria",
+				"champ": "karma",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "rengar",
+				"ban": "nami"
+			},
+			"win_method": "kill",
+			"duration": "1:46"
+		},
+		{
+			"szn": 0,
+			"#": 11,
+			"stage": "SEMIFINAL",
+			"winner": "p1",
+			"p1": {
+				"name": "sarjoun",
+				"champ": "yasuo",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "andrew",
+				"champ": "teemo",
+				"ban": "none"
+			},
+			"win_method": "kill",
+			"duration": "2:10"
+		},
+		{
+			"szn": 0,
+			"#": 12,
+			"stage": "SEMIFINAL",
+			"winner": "p2",
+			"p1": {
+				"name": "mikey",
+				"champ": "gnar",
+				"ban": "skarner"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "akali",
+				"ban": "soraka"
+			},
+			"win_method": "kill",
+			"duration": "4:31"
+		},
+		{
+			"szn": 0,
+			"#": 13,
+			"stage": "FINAL M1",
+			"winner": "p2",
+			"p1": {
+				"name": "sarjoun",
+				"champ": "yasuo",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "yasuo",
+				"ban": "none"
+			},
+			"win_method": "kill",
+			"duration": "2:7"
+		},
+		{
+			"szn": 0,
+			"#": 14,
+			"stage": "FINAL M2",
+			"winner": "p2",
+			"p1": {
+				"name": "sarjoun",
+				"champ": "zed",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "aidan",
+				"champ": "zed",
+				"ban": "none"
+			},
+			"win_method": "kill",
+			"duration": "2:37"
+		}
+	],
+	"users": [
+		"aidan",
+		"andrew",
+		"chris",
+		"brian",
+		"jack",
+		"nick",
+		"mikey",
+		"niko",
+		"maria",
+		"sarjoun",
+		"kyle",
+		"sam",
+		"danny"
+	]
+}
