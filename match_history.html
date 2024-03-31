@@ -6,15 +6,15 @@
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
-    <title>WC:S1 - Stats</title>
+    <title>WC:S1 - Match History</title>
     <link rel="icon" href="icon.jpg">
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js"></script>
-    <body onload="createLeaderboard('./data/newdata.json', document.querySelector('.stats'))">
+    <body onload="createMatchHistory('./data/newdata.json', document.querySelector('.match_history'))">
 </head>
 <body>
-    <a href="./match_history.html">match history</a>
-    <table class="stats"></table>
+    <a href="./index.html">stats</a>
+    <div class="match_history"></div>
 </body>
 <script>
     
