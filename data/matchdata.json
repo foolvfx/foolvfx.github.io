@@ -1,16 +1,5 @@
 {
-	"headers": [
-		"#",
-		"player",
-		"win-loss",
-		"winrate",
-		"matches",
-		"avg_length",
-		"unique_champs",
-		"played",
-		"banned_against"
-	],
-	"matches": [
+	"0": [
 		{
 			"szn": 0,
 			"#": 1,
@@ -49,6 +38,24 @@
 		},
 		{
 			"szn": 0,
+			"#": 3,
+			"stage": "SWISS R1",
+			"winner": "p1",
+			"p1": {
+				"name": "alex",
+				"champ": "ahri",
+				"ban": "zyra"
+			},
+			"p2": {
+				"name": "maria",
+				"champ": "seraphine",
+				"ban": "none"
+			},
+			"win_method": "kill",
+			"duration": "2:53"
+		},
+		{
+			"szn": 0,
 			"#": 4,
 			"stage": "SWISS R1",
 			"winner": "p1",
@@ -82,6 +89,24 @@
 			},
 			"win_method": "kill",
 			"duration": "2:12"
+		},
+		{
+			"szn": 0,
+			"#": 6,
+			"stage": "SWISS R2",
+			"winner": "p2",
+			"p1": {
+				"name": "alex",
+				"champ": "irelia",
+				"ban": "none"
+			},
+			"p2": {
+				"name": "sarjoun",
+				"champ": "yasuo",
+				"ban": "diana"
+			},
+			"win_method": "kill",
+			"duration": "2:17"
 		},
 		{
 			"szn": 0,
@@ -136,6 +161,24 @@
 			},
 			"win_method": "kill",
 			"duration": "1:46"
+		},
+		{
+			"szn": 0,
+			"#": 10,
+			"stage": "SWISS R3",
+			"winner": "p1",
+			"p1": {
+				"name": "mikey",
+				"champ": "vi",
+				"ban": "diana"
+			},
+			"p2": {
+				"name": "alex",
+				"champ": "kindred",
+				"ban": "corki"
+			},
+			"win_method": "kill",
+			"duration": "1:01"
 		},
 		{
 			"szn": 0,
@@ -210,19 +253,78 @@
 			"duration": "2:37"
 		}
 	],
-	"users": [
-		"aidan",
-		"andrew",
-		"chris",
-		"brian",
-		"jack",
-		"nick",
-		"mikey",
-		"niko",
-		"maria",
-		"sarjoun",
-		"kyle",
-		"sam",
-		"danny"
-	]
+    "1": [
+        {
+            "szn": 1,
+            "#": 1,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "andrew",
+                "champ": "draven",
+                "ban": "bard"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "trundle",
+                "ban": "vayne"
+            },
+            "win_method": "kill",
+            "duration": "1:17"
+        },
+        {
+            "szn": 1,
+            "#": 2,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "andrew",
+                "champ": "yone",
+                "ban": "akali"
+            },
+            "p2": {
+                "name": "niko",
+                "champ": "jayce",
+                "ban": "draven"
+            },
+            "win_method": "kill",
+            "duration": "2:22"
+        },
+        {
+            "szn": 1,
+            "#": 3,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "andrew",
+                "champ": "yone",
+                "ban": "malphite"
+            },
+            "p2": {
+                "name": "chris",
+                "champ": "ziggs",
+                "ban": "draven"
+            },
+            "win_method": "kill",
+            "duration": "2:22"
+        },
+        {
+            "szn": 1,
+            "#": 4,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "andrew",
+                "champ": "draven",
+                "ban": "ahri"
+            },
+            "p2": {
+                "name": "mikey",
+                "champ": "pyke",
+                "ban": "skarner"
+            },
+            "win_method": "kill",
+            "duration": "8:13"
+        }
+    ]
 }

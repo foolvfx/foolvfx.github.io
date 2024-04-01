@@ -1,6 +1,12 @@
-async function createMatchHistory(filepath, container) {
-    const response = await fetch(filepath)
-    const { headers, matches, users } = await response.json()
+async function createMatchHistory(container) {
+    container.innerHTML = ''
+    const season = document.getElementById("season")
+    const data = await (await fetch('./data/data.json')).json()
+    const matchdata = await (await fetch('./data/matchdata.json')).json()
+    const headers = await (await fetch('./data/headers.json')).json()
+    
+    const matches = matchdata[season.value]
+    const users = data['users'][season.value]
 
     for (const mat of matches) {
         const row = document.createElement("div")
@@ -79,15 +85,22 @@ function getChampImg(champname) {
     return img
 }
 
-async function createLeaderboard(filepath, table) {
-    const response = await fetch(filepath)
-    const { headers, matches, users } = await response.json()
+async function createLeaderboard(table) {
+    table.innerHTML = ''
+    const season = document.getElementById("season")
+    const data = await (await fetch('./data/data.json')).json()
+    const matchdata = await (await fetch('./data/matchdata.json')).json()
+    const headers = await (await fetch('./data/headers.json')).json()
+    
+    const matches = matchdata[season.value]
+    const users = data['users'][season.value]
+
     const stats = await createStats(matches, users)
 
     const tbl_head = document.createElement('tr')
     tbl_head.className = 'stats_header'
 
-    for (const htxt of headers) {
+    for (const htxt of headers['stats']) {
         const head = document.createElement('th')
         head.textContent = htxt
         if (htxt == '#') {
@@ -109,7 +122,7 @@ async function createLeaderboard(filepath, table) {
 
         placement++
 
-        if (placement == 8) {
+        if (season.value == 1 && placement == 8) {
             urow.style = "border-bottom: 2px solid red;"
         }
         
@@ -243,7 +256,7 @@ async function createStats(matches, users) {
         stats[winner['name']]['bans'].push(winner['ban'])
         stats[winner['name']]['banned_against'].push(loser['ban'])
         stats[winner['name']]['total_duration'] += (Number(mat['duration'].split(':')[0])*60) + (Number(mat['duration'].split(':')[1]))
-        
+
         stats[loser['name']]['losses']++
         stats[loser['name']]['matches']++
         stats[loser['name']]['champions'].push(loser['champ'])

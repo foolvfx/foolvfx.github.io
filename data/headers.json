@@ -1,0 +1,13 @@
+{
+    "stats": [
+        "#",
+        "player",
+        "win-loss",
+        "winrate",
+        "matches",
+        "avg_length",
+        "unique_champs",
+        "played",
+        "banned_against"
+    ]
+}

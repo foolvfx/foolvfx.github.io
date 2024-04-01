@@ -6,14 +6,20 @@
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
-    <title>WC:S1 - Match History</title>
-    <link rel="icon" href="icon.jpg">
+    <title>WC - Match History</title>
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js"></script>
-    <body onload="createMatchHistory('./data/newdata.json', document.querySelector('.match_history'))">
+    <body onload="createMatchHistory(document.querySelector('.match_history'))">
 </head>
 <body>
     <a href="./index.html">stats</a>
+    <br>
+    <span>season</span>
+    <select name="season" id="season" onchange="createMatchHistory(document.querySelector('.match_history'))">
+        <option value="0">0</option>
+        <option value="1" selected="selected">1</option>
+    </select>
     <div class="match_history"></div>
 </body>
 <script>

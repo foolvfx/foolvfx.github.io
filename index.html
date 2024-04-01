@@ -6,14 +6,20 @@
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
-    <title>WC:S1 - Stats</title>
-    <link rel="icon" href="icon.jpg">
+    <title>WC - Stats</title>
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js"></script>
-    <body onload="createLeaderboard('./data/newdata.json', document.querySelector('.stats'))">
+    <body onload="createLeaderboard(document.querySelector('.stats'))">
 </head>
 <body>
     <a href="./match_history.html">match history</a>
+    <br>
+    <span>season</span>
+    <select name="season" id="season" onchange="createLeaderboard(document.querySelector('.stats'))">
+        <option value="0">0</option>
+        <option value="1" selected="selected">1</option>
+    </select>
     <table class="stats"></table>
 </body>
 <script>
