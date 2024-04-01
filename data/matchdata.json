@@ -361,6 +361,96 @@
             },
             "win_method": "kill",
             "duration": "3:26"
+        },
+        {
+            "szn": 1,
+            "#": 7,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "niko",
+                "champ": "zoe",
+                "ban": "illaoi"
+            },
+            "p2": {
+                "name": "sam",
+                "champ": "yone",
+                "ban": "akali"
+            },
+            "win_method": "kill",
+            "duration": "6:59"
+        },
+        {
+            "szn": 1,
+            "#": 8,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "sam",
+                "champ": "xerath",
+                "ban": "yasuo"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "volibear",
+                "ban": "yone"
+            },
+            "win_method": "kill",
+            "duration": "7:46"
+        },
+        {
+            "szn": 1,
+            "#": 9,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "sam",
+                "champ": "xerath",
+                "ban": "leblanc"
+            },
+            "p2": {
+                "name": "sarjoun",
+                "champ": "yasuo",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "6:22"
+        },
+        {
+            "szn": 1,
+            "#": 10,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "niko",
+                "champ": "akali",
+                "ban": "yasuo"
+            },
+            "p2": {
+                "name": "sarjoun",
+                "champ": "leblanc",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "1:49"
+        },
+        {
+            "szn": 1,
+            "#": 11,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "andrew",
+                "champ": "lux",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "sam",
+                "champ": "yone",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "5:46"
         }
     ]
 }

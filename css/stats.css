@@ -1,0 +1,64 @@
+@font-face {
+    font-family: bahnschrift;
+    src: url(../font/BAHNSCHRIFT.TTF);
+}
+
+body {
+    font-family: bahnschrift;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.stats_cicon {
+    width: 32px;
+    height: 32px;
+}
+
+.champ_container {
+    position: relative;
+    display: inline;
+}
+
+.champ_quant {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    bottom: 17px;
+    right: 2px;
+}
+
+.stats {
+    background-color: rgb(163, 163, 163);
+}
+
+.stats_header {
+    border-bottom: 5px solid black;
+}
+
+th {
+    padding: 10px;
+}
+
+.user_row {
+    height: 32px;
+    text-align: center;
+}
+
+#placement {
+    width: 45px;
+}
+
+.champ_container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.won_by {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

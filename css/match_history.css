@@ -1,6 +1,6 @@
 @font-face {
     font-family: bahnschrift;
-    src: url(./font/BAHNSCHRIFT.TTF);
+    src: url(../font/BAHNSCHRIFT.TTF);
 }
 
 body {
@@ -87,10 +87,6 @@ table {
 
 #loser {
     background-color: rgb(255, 99, 99);
-}
-
-.stats_header {
-    border-bottom: 5px solid black;
 }
 
 th {
