@@ -469,6 +469,24 @@
             },
             "win_method": "kill",
             "duration": "3:00"
+        },
+        {
+            "szn": 1,
+            "#": 13,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "chris",
+                "champ": "renekton",
+                "ban": "akali"
+            },
+            "p2": {
+                "name": "niko",
+                "champ": "camille",
+                "ban": "mordekaiser"
+            },
+            "win_method": "kill",
+            "duration": "1:50"
         }
     ]
 }
