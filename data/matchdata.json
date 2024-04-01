@@ -325,6 +325,42 @@
             },
             "win_method": "kill",
             "duration": "8:13"
+        },
+        {
+            "szn": 1,
+            "#": 5,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "andrew",
+                "champ": "zed",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "sarjoun",
+                "champ": "leblanc",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "1:14"
+        },
+        {
+            "szn": 1,
+            "#": 6,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "sarjoun",
+                "champ": "yasuo",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "ziggs",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "3:26"
         }
     ]
 }
