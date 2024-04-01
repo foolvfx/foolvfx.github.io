@@ -451,6 +451,24 @@
             },
             "win_method": "kill",
             "duration": "5:46"
+        },
+        {
+            "szn": 1,
+            "#": 12,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "chris",
+                "champ": "mordekaiser",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "sarjoun",
+                "champ": "yasuo",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "3:00"
         }
     ]
 }
