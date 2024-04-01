@@ -10,17 +10,20 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="./css/stats.css"/>
     <script src="./js/stats.js"></script>
-    <body onload="createLeaderboard(document.querySelector('.stats'))">
+    <body onload="createLeaderboard(document.querySelector('.table-container'))">
 </head>
 <body>
-    <a href="./match_history.html">match history</a>
-    <br>
-    <span>season</span>
-    <select name="season" id="season" onchange="createLeaderboard(document.querySelector('.stats'))">
-        <option value="0">0</option>
-        <option value="1" selected="selected">1</option>
-    </select>
-    <table class="stats"></table>
+    <div class="site-nav">
+        <h2>wow cup</h2>
+        <div class="redirects">
+            <h3><a href="./match_history.html">match history</a></h3>
+            <h3><a href="./index.html" style="color: #DB324D;">stats</a></h3>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="table-container">
+        </div>
+    </div>
 </body>
 <script>
     

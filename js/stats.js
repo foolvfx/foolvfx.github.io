@@ -5,107 +5,137 @@ function getChampImg(champname) {
     return img
 }
 
-async function createLeaderboard(table) {
-    table.innerHTML = ''
-    const season = document.getElementById("season")
+function createHeaderRow(headers) {
+    const head_row = document.createElement('div')
+    head_row.className = 'table-row heading'
+
+    for (const htxt of headers) {
+        const head = document.createElement('div')
+        head.className = 'row-item'
+        head.textContent = htxt
+        head_row.appendChild(head)
+    }
+
+    return head_row
+}
+
+function createChampItems(champs) {
+    const champ_item = document.createElement('div')
+    const ban_item = document.createElement('div')
+    champ_item.className = 'row-item'
+    ban_item.className = 'row-item'
+
+    champs['champs'].slice(0,3).forEach(ele => {
+        const champ_img = getChampImg(ele[0])
+        champ_img.className = 'champ-icon'
+        champ_item.appendChild(champ_img)
+    })
+    
+    champs['ban'].slice(0,3).forEach(ele => {
+        const champ_img = getChampImg(ele[0])
+        champ_img.className = 'champ-icon'
+        ban_item.appendChild(champ_img)
+    })
+
+    const c_len = champ_item.children.length
+    const b_len = ban_item.children.length
+    
+    for (let i = 0; i < 3-c_len; i++) {
+        const champ_img = getChampImg('placeholder')
+        champ_img.className = 'champ-icon'
+        champ_item.appendChild(champ_img)
+    }
+
+    for (let i = 0; i < 3-b_len; i++) {
+        const champ_img = getChampImg('placeholder')
+        champ_img.className = 'champ-icon'
+        ban_item.appendChild(champ_img)
+    }
+
+    return { 'champ_item': champ_item, 'ban_item': ban_item }
+}
+
+async function createLeaderboard(tbl_container) {
+    tbl_container.innerHTML = ''
+
+    const season = 1
+    // const season = document.getElementById("season")
     const data = await (await fetch('./data/data.json')).json()
     const matchdata = await (await fetch('./data/matchdata.json')).json()
     const headers = await (await fetch('./data/headers.json')).json()
     
-    const matches = matchdata[season.value]
-    const users = data['users'][season.value]
+    const matches = matchdata[season]
+    const users = data['users'][season]
 
     const stats = await createStats(matches, users)
 
-    const tbl_head = document.createElement('tr')
-    tbl_head.className = 'stats_header'
+    const head_row = createHeaderRow(headers['stats'])
+    tbl_container.appendChild(head_row)
 
-    for (const htxt of headers['stats']) {
-        const head = document.createElement('th')
-        head.textContent = htxt
-        if (htxt == '#') {
-            head.id = 'placement'
-        } else {
-            head.id = htxt
-        }
-
-        tbl_head.appendChild(head)
-    }
-
-    table.appendChild(tbl_head)
-
-    var placement = 0
+    var placement_num = 0
 
     for (const user in stats) {
-        const urow = document.createElement('tr')
-        urow.className = 'user_row'
+        placement_num++
 
-        placement++
+        let placement_block = ''
 
-        if (season.value == 1 && placement == 8) {
-            urow.style = "border-bottom: 2px solid red;"
+        if (placement_num <= 4) {
+            placement_block = 'top-4'
+        } else if (placement_num <= 8) {
+            placement_block = 'top-8'
+        } else {
+            placement_block = 'not-qualified'
         }
-        
 
-        let avg_dur = getAvgDuration(stats[user])
-        
+        const urow = document.createElement('div')
+        urow.className = `table-row ${placement_block}`
+        urow.id = `s${season}p${placement_num}`
 
+        const avg_dur = getAvgDuration(stats[user])
         const champs = getChampData(stats[user])
 
-        urow.innerHTML = `
-        <td>${placement}</td>
-        <td>${user}</td>
-        <td>${stats[user]['wins']} - ${stats[user]['losses']}</td>
-        <td style="background-color:${getColor(stats[user]['winrate']/100)};font-weight:bold;">${stats[user]['winrate']}%</td>
-        <td>${stats[user]['matches']}</td>
-        <td>${avg_dur}</td>
-        <td>${Object.keys(champs['champs']).length}</td>
-        `
+        const placement = document.createElement('div')
+        placement.className = 'row-item'
+        placement.textContent = placement_num
+        const player = document.createElement('div')
+        player.className = 'row-item player'
+        player.textContent = user
+        const win_loss = document.createElement('div')
+        win_loss.className = 'row-item'
+        win_loss.textContent = `${stats[user]['wins']} - ${stats[user]['losses']}`
+        const win_rate = document.createElement('div')
+        win_rate.className = 'row-item'
+        win_rate.textContent = `${stats[user]['winrate']}%`
+        // win_rate.style = `color:${getColor(stats[user]['winrate']/100)};font-weight:bold;`
+        const num_matches = document.createElement('div')
+        num_matches.className = 'row-item'
+        num_matches.textContent = stats[user]['matches']
+        const avg_length = document.createElement('div')
+        avg_length.className = 'row-item'
+        avg_length.textContent = avg_dur
+        const unique_champs = document.createElement('div')
+        unique_champs.className = 'row-item'
+        unique_champs.textContent = Object.keys(champs['champs']).length
 
-        const top_champs = document.createElement('td')
-        const top_banned = document.createElement('td')
-
-        champs['champs'].slice(0,3).forEach(ele => {
-            const champ_container = document.createElement('div')
-            champ_container.className = 'champ_container'
-
-            const champ_img = getChampImg(ele[0])
-            champ_img.className = 'stats_cicon'
-
-            const quant = document.createElement('div')
-            quant.className = 'champ_quant'
-            quant.textContent = ele[1]
-
-            champ_container.appendChild(champ_img)
-
-            champ_container.appendChild(champ_img)
-            champ_container.appendChild(quant)
-            top_champs.appendChild(champ_container)
-        })
+        const { champ_item, ban_item } = createChampItems(champs)
         
-        champs['ban'].slice(0,3).forEach(ele => {
-            const champ_container = document.createElement('div')
-            champ_container.className = 'champ_container'
-    
-            const champ_img = getChampImg(ele[0])
-            champ_img.className = 'stats_cicon'
-    
-            const quant = document.createElement('div')
-            quant.className = 'champ_quant'
-            quant.textContent = ele[1]
-    
-            champ_container.appendChild(champ_img)
-    
-            champ_container.appendChild(champ_img)
-            champ_container.appendChild(quant)
-            top_banned.appendChild(champ_container)
-        })
+        urow.appendChild(placement)
+        urow.appendChild(player)
+        urow.appendChild(win_loss)
+        urow.appendChild(win_rate)
+        urow.appendChild(num_matches)
+        urow.appendChild(avg_length)
+        urow.appendChild(unique_champs)
+        urow.appendChild(champ_item)
+        urow.appendChild(ban_item)
 
-        urow.appendChild(top_champs)
-        urow.appendChild(top_banned)
-
-        table.appendChild(urow)
+        tbl_container.appendChild(urow)
     }
+}
+
+function getColor(value){
+    var hue=((value)*120).toString(10);
+    return ["hsl(",hue,",100%,75%)"].join("");
 }
 
 function getAvgDuration(user) {
@@ -211,10 +241,4 @@ async function createStats(matches, users) {
     })
 
     return sorted
-}
-
-function getColor(value){
-    //value from 0 to 1
-    var hue=((value)*120).toString(10);
-    return ["hsl(",hue,",100%,50%)"].join("");
 }

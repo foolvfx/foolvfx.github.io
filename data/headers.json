@@ -5,9 +5,16 @@
         "win-loss",
         "winrate",
         "matches",
-        "avg_length",
-        "unique_champs",
-        "played",
-        "banned_against"
+        "avg. duration",
+        "unique champs",
+        "champs played",
+        "opponent bans"
+    ],
+    "match_history": [
+        "stage",
+        "winner",
+        "loser",
+        "win method",
+        "bans"
     ]
 }

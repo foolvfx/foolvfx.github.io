@@ -1,81 +1,91 @@
-async function createMatchHistory(container) {
-    container.innerHTML = ''
-    const season = document.getElementById("season")
+async function createMatchHistory(tbl_container) {
+    tbl_container.innerHTML = ''
+
+    const season = 1
+    // const season = document.getElementById("season")
     const data = await (await fetch('./data/data.json')).json()
     const matchdata = await (await fetch('./data/matchdata.json')).json()
     const headers = await (await fetch('./data/headers.json')).json()
     
-    const matches = matchdata[season.value]
-    const users = data['users'][season.value]
+    const matches = matchdata[season]
+    const users = data['users'][season]
+
+    const head_row = createHeaderRow(headers['match_history'])
+    tbl_container.appendChild(head_row)
 
     for (const mat of matches) {
-        const row = document.createElement("div")
-        row.className = 'match_row'
-        
-        let row_obj = {
-            "szn": mat["szn"],
-            "#": mat["#"],
-            "stage": mat["stage"],
-            "winner": null,
-            "loser": null,
-            "won_by": mat["win_method"],
-            "duration": mat["duration"],
-        }
+        const match_row = document.createElement("div")
+        match_row.className = `table-row ${mat['stage']}`
 
-        let p1_frame = playerFrame(mat['p1'])
-        let p2_frame = playerFrame(mat['p2'])
+        const winner = mat['winner'] == 'p1' ? mat['p1'] : mat ['p2']
+        const loser = mat['winner'] != 'p1' ? mat['p1'] : mat ['p2']
 
-        if (mat['winner'] == 'p1') {
-            row_obj['winner'] = p1_frame
-            row_obj['loser'] = p2_frame
-        } else {
-            row_obj['loser'] = p1_frame
-            row_obj['winner'] = p2_frame
-        }
+        const stage = document.createElement('div')
+        stage.className = 'row-item'
+        stage.textContent = `${mat['stage']} - #${mat['#']}`
+        const winner_frame = createPlayerFrame(winner)
+        const loser_frame = createPlayerFrame(loser)
+        const win_method = document.createElement('div')
+        win_method.className = 'row-item'
+        win_method.textContent = `${mat['win_method']} @ ${mat['duration']}`
+        const ban_frame = createBanFrame(winner, loser)
 
-        row_obj['winner'].id = 'winner'
-        row_obj['loser'].id = 'loser'
+        match_row.appendChild(stage)
+        match_row.appendChild(winner_frame)
+        match_row.appendChild(loser_frame)
+        match_row.appendChild(win_method)
+        match_row.appendChild(ban_frame)
 
-        const match_num = document.createElement("div")
-        match_num.className = 'match_num'
-        match_num.textContent = row_obj['#']
-
-        const event_frame = document.createElement("div")
-        event_frame.className = 'event'
-        event_frame.innerHTML = `<a>S${row_obj['szn']}</a>\n<a>${row_obj['stage']}</a>`
-
-        const won_by = document.createElement("div")
-        won_by.className = 'won_by'
-        won_by.textContent = `${row_obj['won_by']} @ ${row_obj['duration']}`
-
-        row.appendChild(match_num)
-        row.appendChild(event_frame)
-        row.appendChild(row_obj['winner'])
-        row.appendChild(row_obj['loser'])
-        row.appendChild(won_by)
-
-        container.appendChild(row)
+        tbl_container.appendChild(match_row)
     }
 }
 
-function playerFrame(player) {
-    const pl = document.createElement("div")
-    pl.className = 'player_frame'
+function createPlayerFrame(player) {
+    const pframe = document.createElement('div')
+    pframe.className = 'row-item'
+    pframe.style = 'justify-content: left;'
 
-    const champ_icon = getChampImg(player['champ'])
-    champ_icon.className = 'champ_icon'
-    
-    const pl_name = document.createElement("span")
-    pl_name.textContent = player['name']
-    
-    const ban_icon = getChampImg(player['ban'])
-    ban_icon.className = 'ban_icon'
-    
-    pl.appendChild(champ_icon)
-    pl.appendChild(pl_name)
-    pl.appendChild(ban_icon)
+    const champ_image = getChampImg(player['champ'])
+    champ_image.className = 'champ-icon'
 
-    return pl
+    const player_name = document.createElement('span')
+    player_name.className = 'player-name'
+    player_name.textContent = player['name']
+
+    pframe.appendChild(champ_image)
+    pframe.appendChild(player_name)
+
+    return pframe
+}
+
+function createBanFrame(winner, loser) {
+    const bframe = document.createElement('div')
+    bframe.className = 'row-item ban-frame'
+
+    const winner_ban = getChampImg(winner['ban'])
+    winner_ban.className = 'champ-icon'
+
+    const loser_ban = getChampImg(loser['ban'])
+    loser_ban.className = 'champ-icon'
+
+    bframe.appendChild(winner_ban)
+    bframe.appendChild(loser_ban)
+
+    return bframe
+}
+
+function createHeaderRow(headers) {
+    const head_row = document.createElement('div')
+    head_row.className = 'table-row heading'
+
+    for (const htxt of headers) {
+        const head = document.createElement('div')
+        head.className = 'row-item'
+        head.textContent = htxt
+        head_row.appendChild(head)
+    }
+
+    return head_row
 }
 
 function getChampImg(champname) {

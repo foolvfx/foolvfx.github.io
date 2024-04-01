@@ -10,17 +10,20 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="./css/match_history.css"/>
     <script src="./js/match_history.js"></script>
-    <body onload="createMatchHistory(document.querySelector('.match_history'))">
+    <body onload="createMatchHistory(document.querySelector('.table-container'))">
 </head>
 <body>
-    <a href="./index.html">stats</a>
-    <br>
-    <span>season</span>
-    <select name="season" id="season" onchange="createMatchHistory(document.querySelector('.match_history'))">
-        <option value="0">0</option>
-        <option value="1" selected="selected">1</option>
-    </select>
-    <div class="match_history"></div>
+    <div class="site-nav">
+        <h2>wow cup</h2>
+        <div class="redirects">
+            <h3><a href="./match_history.html" style="color: #DB324D;">match history</a></h3>
+            <h3><a href="./index.html">stats</a></h3>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="table-container">
+        </div>
+    </div>
 </body>
 <script>
     
