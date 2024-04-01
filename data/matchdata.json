@@ -487,6 +487,42 @@
             },
             "win_method": "kill",
             "duration": "1:50"
+        },
+        {
+            "szn": 1,
+            "#": 14,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "kyle",
+                "champ": "lux",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "andrew",
+                "champ": "twistedfate",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "6:37"
+        },
+        {
+            "szn": 1,
+            "#": 15,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "kyle",
+                "champ": "syndra",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "draven",
+                "ban": "lux"
+            },
+            "win_method": "kill",
+            "duration": "3:06"
         }
     ]
 }
