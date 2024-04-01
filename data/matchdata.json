@@ -523,6 +523,24 @@
             },
             "win_method": "kill",
             "duration": "3:06"
+        },
+        {
+            "szn": 1,
+            "#": 16,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "chris",
+                "champ": "caitlyn",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "mordekaiser",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "5:59"
         }
     ]
 }
