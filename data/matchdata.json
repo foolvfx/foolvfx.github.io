@@ -541,6 +541,42 @@
             },
             "win_method": "kill",
             "duration": "5:59"
+        },
+        {
+            "szn": 1,
+            "#": 17,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "brian",
+                "champ": "garen",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "andrew",
+                "champ": "akali",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "3:59"
+        },
+        {
+            "szn": 1,
+            "#": 18,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "chris",
+                "champ": "rammus",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "brian",
+                "champ": "draven",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "2:03"
         }
     ]
 }
