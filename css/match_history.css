@@ -57,7 +57,7 @@ h3:hover {
 
 .main-container {
     width: 100%;
-    height: 100%;
+    height: 2500px;
     display: flex;
     margin: 0;
     justify-content: center;
