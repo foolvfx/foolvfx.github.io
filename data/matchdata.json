@@ -620,6 +620,24 @@
             "stage": "groups",
             "winner": "p1",
             "p1": {
+                "name": "chris",
+                "champ": "renekton",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "nick",
+                "champ": "yone",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "1:59"
+        },
+        {
+            "szn": 1,
+            "#": 22,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
                 "name": "alex",
                 "champ": "ekko",
                 "ban": "none"
@@ -634,7 +652,7 @@
         },
         {
             "szn": 1,
-            "#": 22,
+            "#": 23,
             "stage": "groups",
             "winner": "p2",
             "p1": {
@@ -652,7 +670,7 @@
         },
         {
             "szn": 1,
-            "#": 23,
+            "#": 24,
             "stage": "groups",
             "winner": "p2",
             "p1": {
@@ -670,7 +688,7 @@
         },
         {
             "szn": 1,
-            "#": 24,
+            "#": 25,
             "stage": "groups",
             "winner": "p2",
             "p1": {
@@ -688,13 +706,13 @@
         },
         {
             "szn": 1,
-            "#": 25,
+            "#": 26,
             "stage": "groups",
             "winner": "p1",
             "p1": {
                 "name": "nick",
                 "champ": "akali",
-                "ban": "none"
+                "ban": "draven"
             },
             "p2": {
                 "name": "andrew",
@@ -702,7 +720,7 @@
                 "ban": "none"
             },
             "win_method": "kill",
-            "duration": "6:00"
+            "duration": "7:20"
         }
     ]
 }
