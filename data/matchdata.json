@@ -685,6 +685,24 @@
             },
             "win_method": "kill",
             "duration": "1:58"
+        },
+        {
+            "szn": 1,
+            "#": 25,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "nick",
+                "champ": "akali",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "andrew",
+                "champ": "akali",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "6:00"
         }
     ]
 }
