@@ -721,6 +721,24 @@
             },
             "win_method": "kill",
             "duration": "7:20"
+        },
+        {
+            "szn": 1,
+            "#": 27,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "niko",
+                "champ": "leblanc",
+                "ban": "mordekaiser"
+            },
+            "p2": {
+                "name": "jack",
+                "champ": "varus",
+                "ban": "akali"
+            },
+            "win_method": "kill",
+            "duration": "2:36"
         }
     ]
 }
