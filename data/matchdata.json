@@ -811,6 +811,42 @@
             },
             "win_method": "kill",
             "duration": "3:25"
+        },
+        {
+            "szn": 1,
+            "#": 32,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "nick",
+                "champ": "aatrox",
+                "ban": "darius"
+            },
+            "p2": {
+                "name": "sam",
+                "champ": "yone",
+                "ban": "briar"
+            },
+            "win_method": "kill",
+            "duration": "3:51"
+        },
+        {
+            "szn": 1,
+            "#": 33,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "nick",
+                "champ": "yone",
+                "ban": "akali"
+            },
+            "p2": {
+                "name": "niko",
+                "champ": "leblanc",
+                "ban": "yasuo"
+            },
+            "win_method": "kill",
+            "duration": "5:09"
         }
     ]
 }
