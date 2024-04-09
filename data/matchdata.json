@@ -793,6 +793,24 @@
             },
             "win_method": "kill",
             "duration": "5:08"
+        },
+        {
+            "szn": 1,
+            "#": 31,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "kyle",
+                "champ": "syndra",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "mikey",
+                "champ": "zed",
+                "ban": "brand"
+            },
+            "win_method": "kill",
+            "duration": "3:25"
         }
     ]
 }
