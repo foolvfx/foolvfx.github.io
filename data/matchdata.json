@@ -739,6 +739,42 @@
             },
             "win_method": "kill",
             "duration": "2:36"
+        },
+        {
+            "szn": 1,
+            "#": 28,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "kyle",
+                "champ": "elise",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "chris",
+                "champ": "garen",
+                "ban": "lux"
+            },
+            "win_method": "tower",
+            "duration": "12:39"
+        },
+        {
+            "szn": 1,
+            "#": 29,
+            "stage": "groups",
+            "winner": "p2",
+            "p1": {
+                "name": "kyle",
+                "champ": "vex",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "niko",
+                "champ": "akali",
+                "ban": "lux"
+            },
+            "win_method": "kill",
+            "duration": "3:46"
         }
     ]
 }
