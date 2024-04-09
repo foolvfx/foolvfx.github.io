@@ -775,6 +775,24 @@
             },
             "win_method": "kill",
             "duration": "3:46"
+        },
+        {
+            "szn": 1,
+            "#": 30,
+            "stage": "groups",
+            "winner": "p1",
+            "p1": {
+                "name": "kyle",
+                "champ": "lux",
+                "ban": "none"
+            },
+            "p2": {
+                "name": "alex",
+                "champ": "riven",
+                "ban": "none"
+            },
+            "win_method": "kill",
+            "duration": "5:08"
         }
     ]
 }

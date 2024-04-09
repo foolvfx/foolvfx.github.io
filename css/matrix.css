@@ -78,7 +78,7 @@ h3:hover {
 
 .matrix-item {
     display: flex;
-    width: 85px;
+    width: 100px;
     height: 45px;
     border: 1px solid #08090A;
     background-color: #F4F7F5;
